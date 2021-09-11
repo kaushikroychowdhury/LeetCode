@@ -8,9 +8,6 @@
 Time Complexity : O(n+m)
 Space Complexity : O(n+m)*/
 
-/*Optimal Approach : [In-Place]
-1. */
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -66,4 +63,27 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
     }
 
     return head->next; // because the first element is 0. ListNode Constructor assigns val=0
+}
+
+/*Optimal Approach : [In-Place]
+1. */
+
+ListNode* mergeTwoListsOPTIMAL(ListNode* l1, ListNode* l2) {
+    if(l1 == NULL) return l2;
+    if(l2 == NULL) return l1;
+
+    if(l2->val < l1->val) swap(l1,l2);
+    ListNode *res = l1;
+    ListNode *temp = NULL;
+
+    while(l1 != NULL) {
+        if(l2->val < l1->val) {
+            swap(l1,l2);
+            temp->next = l1;
+        }
+        temp = l1;
+        l1 = l1->next;
+    }
+    temp->next = l2;
+    return res;
 }
