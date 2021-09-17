@@ -50,11 +50,11 @@ Time Complexity : O(2m)*/
 #include<bits/stdc++.h>
 using namespace std;
 
- struct ListNode {
-     int val;
-     ListNode *next;
-     ListNode(int x) : val(x), next(NULL) {}
- };
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
 
 // OPTIMAL APPROACH 2
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
