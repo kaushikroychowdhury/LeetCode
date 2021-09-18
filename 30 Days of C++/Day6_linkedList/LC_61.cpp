@@ -15,7 +15,7 @@ As we can see if k is multiple of length of list then the list remains same
 1. k = k % len
 2. same as brute force approach
 
-Time Complexity : O(n)*/
+Time Complexity : O(n) + O(n - (n % k)) ~ O(n)*/
 
 #include<bits/stdc++.h>
 using namespace std;
