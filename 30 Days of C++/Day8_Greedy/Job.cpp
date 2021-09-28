@@ -1,5 +1,8 @@
 // Job Sequencing | GFG
 
+// Time Complexity : O(nlogn) + O(n*m)
+// Space Complexity : O(n)
+
 #include<bits/stdc++.h>
 using namespace std;
 
